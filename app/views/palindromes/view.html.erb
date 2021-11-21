@@ -1,0 +1,9 @@
+<h1>Palindromes#view</h1>
+<p>Find me in app/views/palindromes/view.html.erb</p>
+<p id="Size">Amount of numbers = <%= @result.length %></p>
+<ol>
+  <% @result.each_with_index do |num, index|%>
+    <li><%= num %>*<%= num %> = <%= num * num %></li>
+  <% end %>
+</ol>
+<%= link_to "Repeat calculation", :palindromes_input %>
