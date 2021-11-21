@@ -24,6 +24,7 @@ function updateResult(response) {
 
     const table = $(document.createElement("div"))
         .addClass("container table")
+        .attr("name", "res-table")
         .css("width", "30%")
         .appendTo(container);
 
