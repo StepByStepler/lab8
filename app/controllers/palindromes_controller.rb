@@ -6,7 +6,9 @@ class PalindromesController < ApplicationController
 
   def view
     n = params[:n].to_i
-    @result = (0..n).filter { |num| palindrome?(num) && palindrome?(num * num) }
+    @result = (0..n)
+              .filter { |num| palindrome?(num) && palindrome?(num * num) }
+              .map { |num| { num: num, sqr: num * num } }
   end
 
   def palindrome?(num)
