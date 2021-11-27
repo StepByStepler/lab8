@@ -10,6 +10,12 @@ class PalindromesController < ApplicationController
     @result = nums.map { |num| { num: num, sqr: num * num } }
   end
 
+  def dump
+    respond_to do |format|
+      format.all { render xml: PalindromeResult.all.map(&:attributes) }
+    end
+  end
+
   def palindrome?(num)
     num.to_s == num.to_s.reverse
   end
