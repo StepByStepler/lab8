@@ -14,12 +14,8 @@ class PalindromesControllerTest < ActionDispatch::IntegrationTest
   test 'should return proper nums for simple input' do
     get palindromes_view_url, params: { n: 25 }
     assert_select 'div#num-col' do |elements|
-      assert_equal 6, elements.size
-
-      expected = [0, 1, 2, 3, 11, 22]
-      elements.each_with_index do |element, index|
-        assert_equal expected[index], element.text.to_i
-      end
+      actual_nums = elements.map { |element| element.text.to_i }
+      assert_equal [0, 1, 2, 3, 11, 22], actual_nums
     end
   end
 
