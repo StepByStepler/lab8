@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users
   root to: 'palindromes#input'
   get 'palindromes/input'
   get 'palindromes/view'

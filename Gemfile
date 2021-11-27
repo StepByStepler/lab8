@@ -40,7 +40,7 @@ gem "ffi", "1.15.4"
 gem "rails-controller-testing", "1.0.5"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-# gem "bcrypt", "~> 3.1.7"
+gem "bcrypt", "3.1.16"
 
 # Use Sass to process CSS
 # gem "sassc-rails", "~> 2.1"
