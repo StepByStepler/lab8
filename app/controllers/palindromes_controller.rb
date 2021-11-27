@@ -9,6 +9,10 @@ class PalindromesController < ApplicationController
     @result = (0..n)
               .filter { |num| palindrome?(num) && palindrome?(num * num) }
               .map { |num| { num: num, sqr: num * num } }
+    respond_to do |format|
+      format.html
+      format.xml { render xml: @result }
+    end
   end
 
   def palindrome?(num)

@@ -27,4 +27,10 @@ class PalindromesControllerTest < ActionDispatch::IntegrationTest
     get palindromes_view_url, params: { n: -5 }
     assert_select 'p#no-number-msg'
   end
+
+  test 'should return valid nums for xml' do
+    get '/palindromes/view.xml', params: { n: 25 }
+    actual_nums = Nokogiri::XML(@response.body).xpath('//num').map { |node| node.text.to_i }
+    assert_equal [0, 1, 2, 3, 11, 22], actual_nums
+  end
 end
