@@ -1,0 +1,29 @@
+<h1>Sessions#new</h1>
+<p>Find me in app/views/sessions/new.html.erb</p>
+<%= javascript_include_tag "https://code.jquery.com/jquery-3.6.0.min.js" %>
+<%= javascript_pack_tag 'session_login' %>
+<%= form_with(url: sessions_create_path, method: :get) do |form| %>
+  <% if @error_message %>
+    <div id="error_explanation">
+      <p><%= @error_message %>></p>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :username %>
+    <%= form.text_field :username %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+  </div>
+
+  <p id="status"></p>
+
+  <div class="actions">
+    <%= form.submit 'Войти' %>
+  </div>
+<% end %>
+<button id="register">Зарегистрироваться</button>
+
