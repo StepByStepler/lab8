@@ -2,6 +2,8 @@
 
 # Main controller
 class PalindromesController < ApplicationController
+  before_action :authenticate
+
   def input; end
 
   def view

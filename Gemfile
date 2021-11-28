@@ -39,6 +39,8 @@ gem "ffi", "1.15.4"
 
 gem "rails-controller-testing", "1.0.5"
 
+gem "jquery", "0.0.1"
+
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 gem "bcrypt", "3.1.16"
 
