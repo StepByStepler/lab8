@@ -1,5 +1,4 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<h3>Аутентификация</h3>
 <%= javascript_include_tag "https://code.jquery.com/jquery-3.6.0.min.js" %>
 <%= javascript_pack_tag 'session_login' %>
 <%= form_with(url: sessions_create_path, method: :get) do |form| %>
@@ -10,12 +9,12 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :username %>
+    <%= form.label 'Логин' %>
     <%= form.text_field :username %>
   </div>
 
   <div class="field">
-    <%= form.label :password %>
+    <%= form.label 'Пароль' %>
     <%= form.password_field :password %>
   </div>
 
