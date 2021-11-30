@@ -1,9 +1,8 @@
-<h1>Palindromes#input</h1>
-<p>Find me in app/views/palindromes/input.html.erb</p>
+<h3>Числа-палиндромы</h3>
 <%= form_tag("/palindromes/view", :method => "get") do %>
   <%= label_tag("Максимальное число:") %>
   <%= text_field_tag(:n) %> <br/>
   <br/>
-  <%= submit_tag("Вычислить") %>
+  <%= submit_tag("Вычислить результат") %>
 <% end %>
 <%= button_to 'Выйти', sessions_destroy_path, method: 'get' %>
